@@ -16,7 +16,7 @@ function CalcularIMC(){
         let modal = document.querySelector('dialog')
         let resultadoIMC = document.querySelector('.resultado-imc')
         let resultIMC = IMC(peso,altura)
-         if (resultIMC <= 18.5){
+         if (resultIMC < 18.6){
             resultadoIMC.innerText = `Seu IMC é de ${resultIMC}! Isso significa que você está abaixo do peso 😟`
         } else if (resultIMC <= 24.9 && resultIMC >= 18.6){
             resultadoIMC.innerText = `Seu IMC é de ${resultIMC}! Isso significa que você está no peso ideal 😃`
