@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC </title>
+    <!-- CSS e Script Local -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Animate Style CDN -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+    </header>
+    <main>
+        <div class="calculadora">
+            <label for="altura">Insira sua altura em metros</label>
+     
+            <input type="number" name="altura" id="altura" placeholder="Ex: 1,80">
+  
+            <label for="peso">Insira seu peso em Kg</label>
+
+            <input type="number" name="peso" id="peso" placeholder="Ex: 82,5">
+
+            <input type="button" value="Checar" class="botao-checar" id="botao-checar">
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido com ❤️ por <a href="https://github.com/jacks0nsilva" target="_blank">Jackson</a></p>
+    </footer>
+
+    <!-- Modal para exibir o resultado -->
+    <dialog class="exibir-modal">
+        <div class="modal">
+            <p class="resultado-imc"></p>
+            <br>
+            <input type="button" value="Fechar" class="fechar-modal" id="botao-fechar-modal">
+        </div>
+    </dialog> 
+</body>
+</html>

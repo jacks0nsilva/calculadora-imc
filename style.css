@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --fonte-padrao: 'Oswald', sans-serif;
+
+    --cor1: #D7D7D9;
+    --cor2: #4F6F8C;
+    --cor3: #94A69F;
+    --cor4: #F7D6D2;
+    --cor5: #3C5473;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao);
+}
+
+body{
+    background-color: var(--cor5);
+}
+
+header > h1{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 2.5rem;
+}
+
+main{
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgb(255 255 255 / 24%) -2px 1px 18px 6px;
+
+}
+
+div.calculadora{
+    margin: 20px 0px;
+}
+
+input{
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+input::placeholder{
+    font-size: 1.2rem;
+}
+
+footer{
+    margin-top: 50px;
+    text-align: center;
+} 
+
+footer > p{
+    color: white;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.botao-checar {
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    border-bottom: 5px solid #5b80b3;
+    transition: 0.3s;
+    background-color: #3c5473;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+  }
+  
+  .botao-checar:hover {
+    border-bottom-width: 0;
+    transform: translateY(5px);
+  }
+  dialog{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  dialog > div.modal{
+    max-width: 90%;
+    height: 25%;
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgb(255 255 255 / 24%) -2px 1px 18px 6px;
+    animation: zoomIn;
+    animation-duration: 1s;
+  }
+
+  div.modal > p {
+    margin: 0px 20px;
+    font-size: 1.2rem;
+  }
+
+  .fechar-modal{
+    line-height: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px; 
+    border-bottom: 5px solid #5b80b3;
+    transition: 0.3s;
+    background-color: #3c5473;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+  }
+
+  .fechar-modal:hover{
+    border-bottom-width: 0;
+    transform: translateY(5px);
+  }
+  
+  .exibir-modal{
+    display: none;
+  }
+
+@media only screen and (max-width: 450px) {
+  
+  header > h1{
+    font-size: 1.7rem;
+  }
+
+  main{
+    max-width: 380px;
+  }
+
+  label{
+    font-size: 1.3rem;
+  }
+
+  input{
+    font-size: 1rem;
+  }
+
+  input::placeholder{
+    font-size: 1rem;
+  }
+
+  input{
+    max-width: 200px;
+    max-height: 35px;
+  }
+
+  footer > p{
+    font-size: 1.4rem;
+  }
+}
