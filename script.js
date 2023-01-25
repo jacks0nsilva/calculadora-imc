@@ -10,8 +10,8 @@ function CalcularIMC(){
     let weight = document.getElementById('peso')
     let altura = Number(height.value)
     let peso = Number(weight.value)
-    if (height.value <= 0 || weight.value <= 0){
-        window.alert('Não foi possível calcular seu IMC, verifique os dados e tente novamente')
+    if (height.value <= 0 || height.value >= 3 || weight.value <= 0){
+        window.alert('Não foi possível calcular seu IMC, verifique os dados e tente novamente!')
     } else{
         let modal = document.querySelector('dialog')
         let resultadoIMC = document.querySelector('.resultado-imc')
@@ -31,6 +31,7 @@ function CalcularIMC(){
         }
         modal.classList.remove('exibir-modal')
         BotaoFecharModal.addEventListener('click', FecharModal)
+        AddPonto()
     }
 }
 
@@ -46,3 +47,6 @@ function FecharModal(){
     let modal = document.querySelector('dialog')
     modal.classList.add('exibir-modal')
 }
+
+
+
