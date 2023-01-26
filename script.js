@@ -10,7 +10,7 @@ function CalcularIMC(){
     let weight = document.getElementById('peso')
     let altura = Number(height.value)
     let peso = Number(weight.value)
-    if (height.value <= 0 || height.value >= 3 || weight.value <= 0){
+    if (altura <= 0 || altura >= 3 || peso <= 0){
         window.alert('Não foi possível calcular seu IMC, verifique os dados e tente novamente!')
     } else{
         let modal = document.querySelector('dialog')
@@ -31,13 +31,12 @@ function CalcularIMC(){
         }
         modal.classList.remove('exibir-modal')
         BotaoFecharModal.addEventListener('click', FecharModal)
-        AddPonto()
     }
 }
 
 // Função para calculr o IMC
-function IMC(peso,altura){
-    let resultado = (peso/(altura*altura))
+function IMC(PesoInformado,AlturaInformada){
+    let resultado = (PesoInformado/(AlturaInformada*AlturaInformada))
     return resultado.toFixed(2)
 }
 
